@@ -70,14 +70,6 @@ a{text-decoration:none;color:inherit}
 .video-host iframe,.video-host video{width:100%;height:100%;border:none;object-fit:cover}
 @media(max-width:640px){.phone-video-grid{grid-template-columns:1fr;gap:18px}.phone-card{width:min(240px,85vw)}.video-host iframe{pointer-events:none}}
 .tap-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;z-index:5;cursor:pointer;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;transition:transform .15s}.tap-center:hover{transform:translate(-50%,-50%) scale(1.08)}.tap-center::after{content:'';border-style:solid;border-width:11px 0 11px 18px;border-color:transparent transparent transparent #fff;margin-left:4px}
-.mapa-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:32px}
-.mapa-card{background:var(--branco);border:1px solid var(--borda);border-radius:12px;padding:28px 18px;text-align:center;transition:border-color 0.2s,box-shadow 0.2s}
-.mapa-card:hover{border-color:var(--azul);box-shadow:0 4px 16px rgba(30,58,138,0.1)}
-.mapa-card .mapa-icon{width:160px;height:160px;margin:0 auto 16px}
-.mapa-card .mapa-icon img{width:100%;height:100%;object-fit:contain}
-.mapa-card .letra{font-family:'Montserrat',sans-serif;font-size:20px;font-weight:900;color:var(--azul);margin-bottom:6px}
-.mapa-card h3{font-size:13px;font-weight:700;margin-bottom:6px;color:var(--preto)}
-.mapa-card p{font-size:12px;color:var(--cinza-texto);line-height:1.5}
 .vantagens-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
 @media(max-width:640px){.vantagens-grid{grid-template-columns:1fr}}
 .vantagens-lista{list-style:none;display:flex;flex-direction:column;gap:14px}
@@ -88,9 +80,6 @@ a{text-decoration:none;color:inherit}
 @media(max-width:540px){.bonus-grid{grid-template-columns:1fr;gap:16px}}
 .bonus-grid img{border-radius:10px;border:1px solid var(--borda);width:100%;transition:transform 0.2s,box-shadow 0.2s}
 .bonus-grid img:hover{transform:scale(1.03);box-shadow:0 4px 16px rgba(30,58,138,0.16)}
-.depo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:40px}
-@media(max-width:640px){.depo-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:12px;padding-bottom:12px;margin-bottom:32px;grid-template-columns:unset}.depo-grid img{flex:0 0 75vw;width:75vw;scroll-snap-align:center;border-radius:10px}}
-.depo-grid img{border-radius:10px;border:1px solid var(--borda);width:100%}
 .como-funciona-img{width:100%;max-width:572px;margin:0 auto;border-radius:12px;border:1px solid var(--borda)}
 @media(max-width:640px){.como-funciona-img{max-width:100%}}
 .alerta-promo{background:var(--azul-claro);border:2px solid var(--azul);border-radius:10px;padding:16px 24px;text-align:center;margin-bottom:36px}
@@ -118,6 +107,8 @@ a{text-decoration:none;color:inherit}
 .plano ul li.bonus-item{color:var(--azul);font-weight:600}
 .plano ul li.bonus-item .p-check{background:var(--amarelo)}
 .plano-rodape{font-size:11px;color:var(--cinza-texto);text-align:center}
+.plano-ancora{font-size:14px;color:var(--vermelho);font-weight:700;text-decoration:line-through}
+.plano-por{font-size:11px;color:var(--cinza-texto);text-transform:uppercase;letter-spacing:0.5px;margin-top:2px}
 .faq-lista{display:flex;flex-direction:column;gap:12px;max-width:720px;margin:0 auto}
 .faq-item{background:var(--branco);border:1px solid var(--borda);border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.04);transition:border-color 0.2s}
 .faq-item:hover{border-color:var(--azul)}
@@ -139,8 +130,7 @@ a{text-decoration:none;color:inherit}
 footer{border-top:1px solid var(--borda);padding:24px 20px;text-align:center;color:var(--cinza-texto);font-size:13px;background:var(--cinza-fundo)}
 footer a{color:var(--azul);text-decoration:underline}
 .text-center{text-align:center}.mt-32{margin-top:32px}.mt-24{margin-top:24px}
-@media(max-width:640px){.secao{padding:48px 16px}.hero{padding:44px 16px 32px}.mapa-card h3{font-size:15.6px}.mapa-card p{font-size:14.4px}.mapa-card .letra{font-size:24px}.como-funciona-img{max-width:100%;border-radius:8px}.bonus-grid{grid-template-columns:1fr;gap:16px}.bonus-grid img{width:100%}}
-
+@media(max-width:640px){.secao{padding:48px 16px}.hero{padding:44px 16px 32px}.como-funciona-img{max-width:100%;border-radius:8px}.bonus-grid{grid-template-columns:1fr;gap:16px}.bonus-grid img{width:100%}}
 
 .objecoes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px}
 @media(max-width:768px){.objecoes-grid{grid-template-columns:1fr}}
@@ -162,6 +152,59 @@ footer a{color:var(--azul);text-decoration:underline}
 .bonus-item-corpo p{padding:0 20px 18px 133px;font-size:13.5px;color:var(--cinza-texto);line-height:1.6}
 @media(max-width:540px){.bonus-item-corpo p{padding:0 20px 18px 20px}}
 .bonus-lista-cta{text-align:center;margin-top:32px}
+
+/* ---------- matemática do faturamento ---------- */
+.mat-grid-b{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:36px}
+@media(max-width:640px){.mat-grid-b{grid-template-columns:1fr}}
+.mat-card-valor{background:var(--branco);border:1px solid var(--borda);border-radius:16px;padding:26px 24px}
+.mat-card-valor h3{font-size:15px;font-weight:800;margin-bottom:16px;color:var(--preto)}
+.mat-linha{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px dashed var(--borda);font-size:13.5px}
+.mat-linha:last-child{border-bottom:none}
+.mat-linha span{color:var(--cinza-texto)}
+.mat-linha b{color:var(--preto);font-family:'Montserrat',sans-serif;white-space:nowrap}
+.mat-linha.mat-destaque-amarelo{background:var(--amarelo);border-radius:10px;padding:14px 16px;margin-top:8px;border-bottom:none}
+.mat-linha.mat-destaque-amarelo span{color:var(--azul);font-weight:700}
+.mat-linha.mat-destaque-amarelo b{color:var(--azul);font-size:16px}
+.mat-card-pergunta{background:var(--azul);color:var(--branco);border-radius:16px;padding:28px 24px;display:flex;flex-direction:column;justify-content:center;gap:14px;text-align:center}
+.mat-card-pergunta h3{font-size:15px;font-weight:800;color:var(--amarelo)}
+.mat-card-pergunta p{font-size:14.5px;line-height:1.6;color:rgba(255,255,255,.92)}
+.mat-subtitulo{font-family:'Montserrat',sans-serif;font-weight:800;font-size:18px;text-align:center;margin:12px 0 20px;color:var(--preto)}
+.mat-passos{display:flex;flex-direction:column;gap:12px;margin-bottom:36px}
+.mat-passo{display:flex;gap:16px;align-items:flex-start;background:var(--cinza-fundo);border:1px solid var(--borda);border-radius:14px;padding:18px 20px}
+.mat-passo-num{flex-shrink:0;width:32px;height:32px;background:var(--azul);color:var(--branco);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px}
+.mat-passo h4{font-size:14.5px;font-weight:800;margin-bottom:4px;color:var(--preto)}
+.mat-passo p{font-size:13.5px;color:var(--cinza-texto);line-height:1.5}
+.mat-passo-verde{background:var(--verde-claro);border-color:#bbf0cf}
+.mat-passo-verde .mat-passo-num{background:var(--verde)}
+.mat-grid-d{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+@media(max-width:640px){.mat-grid-d{grid-template-columns:1fr}}
+.mat-coluna{border-radius:16px;padding:24px 22px}
+.mat-coluna h3{font-size:14.5px;font-weight:800;margin-bottom:14px}
+.mat-coluna ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.mat-coluna li{font-size:13.5px;line-height:1.5;padding-left:18px;position:relative}
+.mat-coluna li::before{content:"•";position:absolute;left:0;font-weight:900}
+.mat-coluna-cinza{background:var(--cinza-fundo);border:1px solid var(--borda)}
+.mat-coluna-cinza h3{color:var(--cinza-texto)}
+.mat-coluna-azul{background:var(--azul-claro);border:1px solid var(--azul-medio)}
+.mat-coluna-azul h3{color:var(--azul)}
+
+/* ---------- como funciona (passos em texto) ---------- */
+.comofunciona-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+@media(max-width:640px){.comofunciona-grid{grid-template-columns:1fr}}
+.comofunciona-passos{display:flex;flex-direction:column;gap:16px}
+.cf-passo{display:flex;gap:14px;align-items:flex-start}
+.cf-num{flex-shrink:0;width:34px;height:34px;background:var(--azul);color:var(--branco);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px}
+.cf-passo h4{font-size:15px;font-weight:800;margin-bottom:3px;color:var(--preto)}
+.cf-passo p{font-size:13.5px;color:var(--cinza-texto);line-height:1.5}
+
+/* ---------- depoimentos em carrossel ---------- */
+.depo-carrossel{overflow:hidden;margin-bottom:40px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.depo-track{display:flex;gap:14px;width:max-content;animation:depo-scroll 20s linear infinite}
+.depo-carrossel:hover .depo-track{animation-play-state:paused}
+.depo-track img{width:220px;flex:0 0 220px;border-radius:14px;border:1px solid var(--borda);box-shadow:0 4px 16px rgba(0,0,0,0.08)}
+@keyframes depo-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:640px){.depo-track img{width:170px;flex:0 0 170px}}
+@media(prefers-reduced-motion:reduce){.depo-track{animation:none}}
 </style>
 <script>
 (function(s,e,n,t,i){s[n]=s[n]||function(){(s[n].q=s[n].q||[]).push(arguments)};
@@ -171,14 +214,14 @@ e.head.appendChild(js)})(window,document,'sentinel','https://track.postshair.com
 </head>
 <body>
 
-<div class="urgencia">🔥 Promoção encerra hoje — <span class="data-destaque" id="data-hoje"></span> Garanta agora antes que o preço volte!</div>
+<div class="urgencia">🔥 Preço de lançamento encerra hoje, <span class="data-destaque" id="data-hoje"></span> — depois volta para R$97. Garanta agora!</div>
 <script>const _d=new Date();const _m=["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"];document.getElementById('data-hoje').textContent=_d.getDate()+'/'+_m[_d.getMonth()];</script>
 
 <section class="hero">
   <div class="container">
     <span class="nicho-badge">Para Técnico em Ar Condicionado Automotivo</span>
-    <h1>EI, TÉCNICO EM AR CONDICIONADO AUTOMOTIVO: PARE DE PERDER <span class="destaque">CLIENTES E DINHEIRO</span> COM POSTS QUE NINGUÉM PARA PARA VER</h1>
-    <p class="subtitulo">Tenha vídeos prontos para a sua empresa de ar condicionado automotivo que prendem a atenção em qualquer rede social e transformam visualizações em contatos, agendamentos e faturamento — sem precisar aparecer, gravar ou editar.</p>
+    <h1>CADA VÍDEO QUE VOCÊ NÃO POSTA É UM CLIENTE QUE <span class="destaque">SEU CONCORRENTE LEVA.</span></h1>
+    <p class="subtitulo">+50 objetos falantes prontos para transformar seguidores em clientes agendando serviço na sua oficina. Baixou, postou, vendeu — sem criar nada do zero.</p>
     <div class="hero-banner"><img src="banner_1.webp" alt="Kit de mídias para Técnicos em Ar Condicionado Automotivo" loading="lazy"></div>
   </div>
 </section>
@@ -190,6 +233,79 @@ e.head.appendChild(js)})(window,document,'sentinel','https://track.postshair.com
     <div class="contador-item"><div class="contador-numero">+7</div><div class="contador-descricao">Bônus exclusivos grátis</div></div>
   </div>
 </div>
+
+<section class="secao bg-branco">
+  <div class="container">
+    <h2 class="secao-titulo">O segredo é simples, quanto mais conteúdo você posta, <span class="destaque">mais clientes você tem todo mês</span></h2>
+    <p class="secao-sub">Vamos fazer a conta que você faz toda semana na sua oficina — só que agora ela trabalha a seu favor.</p>
+
+    <div class="mat-grid-b">
+      <div class="mat-card-valor">
+        <h3>O que 1 novo cliente vale</h3>
+        <p class="mat-linha"><span>Ticket médio por atendimento</span><b>R$220 a R$450</b></p>
+        <p class="mat-linha"><span>1 cliente atendido hoje</span><b>R$300 (média)</b></p>
+        <p class="mat-linha"><span>Retorno em manutenções (filtro, gás, revisão) em 2 anos</span><b>R$600+</b></p>
+        <p class="mat-linha mat-destaque-amarelo"><span>Só o conteúdo pronto resolve isso?</span><b>R$27,90 UMA VEZ</b></p>
+      </div>
+      <div class="mat-card-pergunta">
+        <h3>🎯 A pergunta que importa:</h3>
+        <p>Vale mais R$27,90 uma vez ou perder clientes recorrentes porque seu concorrente estava postando e você não?</p>
+        <a href="#planos" class="btn-cta" style="max-width:100%;">QUERO PARAR DE PERDER CLIENTE</a>
+      </div>
+    </div>
+
+    <h3 class="mat-subtitulo">⚙️ Como o vídeo vira agendamento na sua oficina</h3>
+    <div class="mat-passos">
+      <div class="mat-passo"><div class="mat-passo-num">1</div><div><h4>"O vídeo para o dedo."</h4><p>O objeto falante prende a atenção nos 3 primeiros segundos — no feed da sua cidade.</p></div></div>
+      <div class="mat-passo"><div class="mat-passo-num">2</div><div><h4>"A pessoa se identifica."</h4><p>Ela pensa: "meu ar tá fraco ou com cheiro ruim" e clica no perfil.</p></div></div>
+      <div class="mat-passo"><div class="mat-passo-num">3</div><div><h4>"A bio + destaques vendem."</h4><p>Você recebe o conteúdo pronto para transformar visita em conversa no WhatsApp.</p></div></div>
+      <div class="mat-passo"><div class="mat-passo-num">4</div><div><h4>"O protocolo fecha."</h4><p>Com o Bônus 6 (Protocolo de Atendimento) e o Bônus 7 (Biblioteca de Respostas), o lead não esfria.</p></div></div>
+      <div class="mat-passo mat-passo-verde"><div class="mat-passo-num">5</div><div><h4>"O agendamento cai."</h4><p>E o cliente aparece na oficina. Isso é faturamento todo mês.</p></div></div>
+    </div>
+
+    <div class="mat-grid-d">
+      <div class="mat-coluna mat-coluna-cinza">
+        <h3>❌ Sem conteúdo nas redes</h3>
+        <ul>
+          <li>Perfil parado há semanas</li>
+          <li>Cliente só chega por indicação (quando vem)</li>
+          <li>Concorrente com feed ativo leva o lead</li>
+          <li>Cadência de atendimentos imprevisível</li>
+          <li>Você depende de sorte e boca a boca</li>
+        </ul>
+      </div>
+      <div class="mat-coluna mat-coluna-azul">
+        <h3>✅ Postando objetos falantes todo dia</h3>
+        <ul>
+          <li>Feed ativo = oficina que parece viva e confiável</li>
+          <li>Algoritmo entrega para quem pesquisa na sua região</li>
+          <li>Lead chega proativo, já aquecido pelo conteúdo</li>
+          <li>Você controla a cadência: 1 vídeo/dia = 30/mês</li>
+          <li>Cada venda alimenta a próxima (compartilhamento)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao bg-cinza">
+  <div class="container">
+    <h2 class="secao-titulo">Técnicos de Ar Condicionado que <span class="destaque">Pararam de Depender de Indicação</span></h2>
+    <p class="secao-sub">🔥 Donos de negócios que já usaram o pacote</p>
+    <div class="depo-carrossel">
+      <div class="depo-track">
+        <img src="depo_1.webp" alt="Depoimento no WhatsApp 1" loading="lazy">
+        <img src="depo_2.webp" alt="Depoimento no WhatsApp 2" loading="lazy">
+        <img src="depo_3.webp" alt="Depoimento no WhatsApp 3" loading="lazy">
+        <img src="depo_4.webp" alt="Depoimento no WhatsApp 4" loading="lazy">
+        <img src="depo_1.webp" alt="" loading="lazy" aria-hidden="true">
+        <img src="depo_2.webp" alt="" loading="lazy" aria-hidden="true">
+        <img src="depo_3.webp" alt="" loading="lazy" aria-hidden="true">
+        <img src="depo_4.webp" alt="" loading="lazy" aria-hidden="true">
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="secao bg-branco">
   <div class="container">
@@ -230,23 +346,6 @@ e.head.appendChild(js)})(window,document,'sentinel','https://track.postshair.com
   </div>
 </section>
 
-<section class="secao bg-cinza">
-  <div class="container">
-    <h2 class="secao-titulo">POR QUE O MÉTODO <span class="destaque">A.R.V.</span> PODE GERAR MAIS CLIENTES?</h2>
-    <p class="secao-sub">Não basta publicar. Seu conteúdo precisa fazer a pessoa parar, assistir e tomar uma atitude.</p>
-    <div style="background:var(--azul-claro);border:1px solid var(--azul-claro);border-radius:10px;padding:20px 24px;text-align:center;"><p style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(13px,2vw,15px);color:var(--azul);">Atenção, Retenção e Vendas — o Método A.R.V.</p></div>
-    <div class="mapa-grid">
-      <div class="mapa-card"><div class="mapa-icon"><img src="arv_1.webp" alt="Atenção" loading="lazy"></div><div class="letra">A</div><h3>Atenção</h3><p>Os personagens interrompem o scroll e fazem seu conteúdo ser percebido nos primeiros segundos.</p></div>
-      <div class="mapa-card"><div class="mapa-icon"><img src="icon2.webp" alt="Retenção" loading="lazy"></div><div class="letra">R</div><h3>Retenção</h3><p>A curiosidade de ver um objeto falando mantém o potencial cliente assistindo por mais tempo.</p></div>
-      <div class="mapa-card"><div class="mapa-icon"><img src="icon3.webp" alt="Vendas" loading="lazy"></div><div class="letra">V</div><h3>Vendas</h3><p>As mensagens apresentam situações de ar condicionado automotivo e incentivam o público a entrar em contato para saber mais.</p></div>
-    </div>
-    <div class="text-center mt-32">
-      <p style="color:var(--preto);font-size:15px;font-weight:700;max-width:480px;margin:0 auto 24px;">Sem atenção, não existe contato.<br>Sem contato, dificilmente existe venda.</p>
-      <a href="#planos" class="btn-cta">VER OFERTA COMPLETA</a>
-    </div>
-  </div>
-</section>
-
 <section class="secao bg-branco">
   <div class="container">
     <h2 class="secao-titulo">Vantagens do <span class="destaque">Nosso Pacote</span></h2>
@@ -255,12 +354,12 @@ e.head.appendChild(js)})(window,document,'sentinel','https://track.postshair.com
       <div class="banner-wrap"><img src="banner_2.webp" alt="Exemplo do pacote" loading="lazy"></div>
       <div>
         <ul class="vantagens-lista">
-          <li><span class="v-check"><svg viewBox="0 0 11 8" fill="none"><path d="M1 3.5L3.5 6.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Economize horas criando conteúdo</li>
-          <li><span class="v-check"><svg viewBox="0 0 11 8" fill="none"><path d="M1 3.5L3.5 6.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Publique vídeos profissionais todos os dias</li>
-          <li><span class="v-check"><svg viewBox="0 0 11 8" fill="none"><path d="M1 3.5L3.5 6.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Atraia mais clientes da sua região</li>
-          <li><span class="v-check"><svg viewBox="0 0 11 8" fill="none"><path d="M1 3.5L3.5 6.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Destaque seu serviço da concorrência</li>
-          <li><span class="v-check"><svg viewBox="0 0 11 8" fill="none"><path d="M1 3.5L3.5 6.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Conteúdo pronto para usar</li>
-          <li><span class="v-check"><svg viewBox="0 0 11 8" fill="none"><path d="M1 3.5L3.5 6.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Basta baixar e postar</li>
+          <li><span class="v-check"><svg viewBox="0 0 11 8" fill="none"><path d="M1 3.5L3.5 6.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>~20h/mês de edição devolvidas para você atender e consertar</li>
+          <li><span class="v-check"><svg viewBox="0 0 11 8" fill="none"><path d="M1 3.5L3.5 6.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Feed ativo todo dia = oficina que parece grande e confiável</li>
+          <li><span class="v-check"><svg viewBox="0 0 11 8" fill="none"><path d="M1 3.5L3.5 6.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Cada vídeo é entregue pelo algoritmo para quem está na sua área de cobertura</li>
+          <li><span class="v-check"><svg viewBox="0 0 11 8" fill="none"><path d="M1 3.5L3.5 6.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Seu concorrente para de levar o lead que era seu</li>
+          <li><span class="v-check"><svg viewBox="0 0 11 8" fill="none"><path d="M1 3.5L3.5 6.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Baixou, postou, vendeu — zero edição</li>
+          <li><span class="v-check"><svg viewBox="0 0 11 8" fill="none"><path d="M1 3.5L3.5 6.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Funciona hoje, sem agência e sem editor</li>
         </ul>
         <div class="mt-24"><a href="#planos" class="btn-cta" style="max-width:100%;">EU QUERO BOMBAR MINHAS REDES</a></div>
       </div>
@@ -272,7 +371,14 @@ e.head.appendChild(js)})(window,document,'sentinel','https://track.postshair.com
   <div class="container">
     <h2 class="secao-titulo">Como Funciona? <span class="destaque">É Simples e Rápido</span></h2>
     <p class="secao-sub">Em minutos você já tem tudo pronto para postar</p>
-    <img src="como_funciona.webp" alt="Como funciona" loading="lazy" class="como-funciona-img">
+    <div class="comofunciona-grid">
+      <img src="como_funciona.webp" alt="Como funciona" loading="lazy" class="como-funciona-img">
+      <div class="comofunciona-passos">
+        <div class="cf-passo"><span class="cf-num">1</span><div><h4>Você compra</h4><p>Pagamento único via Pix, acesso imediato.</p></div></div>
+        <div class="cf-passo"><span class="cf-num">2</span><div><h4>Recebe em 2 minutos</h4><p>Tudo chega no seu email e WhatsApp, organizado por pasta.</p></div></div>
+        <div class="cf-passo"><span class="cf-num">3</span><div><h4>Posta hoje</h4><p>Baixa o vídeo, publica no Instagram/TikTok/WhatsApp. Pronto.</p></div></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -303,7 +409,7 @@ e.head.appendChild(js)})(window,document,'sentinel','https://track.postshair.com
           <div class="bonus-item-titulo-novo"><span class="bonus-badge">BÔNUS 3</span>Gerador de Orçamentos</div>
           <div class="bonus-item-seta">▾</div>
         </div>
-        <div class="bonus-item-corpo"><p>Receba um guia em PDF com um passo a passo para criar e enviar orçamentos. O guia dá acesso a um gerador online gratuito e externo; o PDF gerado pela ferramenta pode conter marca d’água.</p></div>
+        <div class="bonus-item-corpo"><p>Receba um guia em PDF com um passo a passo para criar e enviar orçamentos. O guia dá acesso a um gerador online gratuito e externo; o PDF gerado pela ferramenta pode conter marca d'água.</p></div>
       </div>
       <div class="bonus-item-novo">
         <div class="bonus-item-cabecalho" onclick="toggleBonusNovo(this)">
@@ -342,18 +448,6 @@ e.head.appendChild(js)})(window,document,'sentinel','https://track.postshair.com
   </div>
 </section>
 
-<section class="secao bg-cinza">
-  <div class="container">
-    <h2 class="secao-titulo">Veja o Que Estão <span class="destaque">Falando</span></h2>
-    <p class="secao-sub">🔥 Donos de negócios que já usaram o pacote</p>
-    <section class="phone-video-section"><div class="phone-video-grid">
-    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><video src="depoimento-1.mp4" width="100%" height="100%" style="aspect-ratio:9/16;object-fit:cover;" playsinline preload="metadata" controls controlsList="nodownload nofullscreen noplaybackrate noremoteplayback" disablePictureInPicture oncontextmenu="return false;"></video></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
-    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><video src="depoimento-2.mp4" width="100%" height="100%" style="aspect-ratio:9/16;object-fit:cover;" playsinline preload="metadata" controls controlsList="nodownload nofullscreen noplaybackrate noremoteplayback" disablePictureInPicture oncontextmenu="return false;"></video></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
-    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><video src="depoimento-3.mp4" width="100%" height="100%" style="aspect-ratio:9/16;object-fit:cover;" playsinline preload="metadata" controls controlsList="nodownload nofullscreen noplaybackrate noremoteplayback" disablePictureInPicture oncontextmenu="return false;"></video></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
-    </div></section>
-  </div>
-</section>
-
 <section class="secao bg-azul-claro" id="planos">
   <div class="container">
     <div class="alerta-promo"><p>⚠️ Promoção válida somente hoje — <span id="data-promo"></span>. Depois o preço volta ao normal.</p></div>
@@ -370,7 +464,8 @@ e.head.appendChild(js)})(window,document,'sentinel','https://track.postshair.com
           <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>10 Legendas</li>
         </ul>
         <div class="plano-preco-box"><p class="plano-de">De R$67,00</p><p class="plano-valor">R$10</p><p class="plano-tipo">Pagamento único</p></div>
-        <a href="upsell.html" class="btn-cta" style="max-width:100%;">QUERO ESSA OPÇÃO</a>
+        <p style="font-size:12px;color:var(--cinza-texto);text-align:center;">Ideal para sentir o efeito — mas sem os bônus que fecham o cliente.</p>
+        <a href="upsell.html" class="btn-cta" style="max-width:100%;">QUERO TESTAR COM 5 VÍDEOS</a>
       </div>
       <div class="plano destaque">
         <span class="plano-badge">⭐ MELHOR OFERTA</span>
@@ -387,12 +482,14 @@ e.head.appendChild(js)})(window,document,'sentinel','https://track.postshair.com
           <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="#1E3A8A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 6: Protocolo de Atendimento</li>
           <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="#1E3A8A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 7: Biblioteca de Respostas para WhatsApp</li>
         </ul>
-        <div class="plano-preco-box"><p class="plano-de">Pagamento único • Sem mensalidade</p><p class="plano-valor">R$27,90</p><p class="plano-tipo">Acesso imediato após a confirmação</p></div>
+        <div class="plano-preco-box"><p class="plano-ancora">De R$197,00</p><p class="plano-por">por apenas</p><p class="plano-valor">R$27,90</p><p class="plano-tipo">Acesso imediato após a confirmação</p></div>
         <a href="https://app.mivvo.com.br/checkout/01a0e2fc-2fc6-7683-b746-25e86340803a" class="btn-cta" style="max-width:100%;">SIM! QUERO MEU PACOTE AGORA!</a>
         <div class="selo-seguranca"><span>✅ Compra 100% segura</span><span>⚡ Receba em menos de 2 minutos</span><span>✅ Pix seguro</span></div>
         <p class="plano-rodape">Você não vai encontrar esse preço depois</p>
       </div>
     </div>
+  </div>
+</section>
 
 <section class="secao bg-branco">
   <div class="container">
@@ -411,7 +508,7 @@ e.head.appendChild(js)})(window,document,'sentinel','https://track.postshair.com
       <h3>Risco Zero — Garantia de 7 Dias</h3>
       <p>Confiamos tanto no pacote que você tem 7 dias de garantia incondicional. Não gostou? Basta enviar um email e devolvemos 100% do seu dinheiro. Sem perguntas.</p>
     </div>
-    <div class="text-center mt-32"><a href="https://app.mivvo.com.br/checkout/01a0e2fc-2fc6-7683-b746-25e86340803a" class="btn-cta">EU PRECISO COMPRAR AGORA MESMO!</a></div>
+    <div class="text-center mt-32"><a href="https://app.mivvo.com.br/checkout/01a0e2fc-2fc6-7683-b746-25e86340803a" class="btn-cta">QUERO MEU PRIMEIRO VÍDEO NO AR HOJE</a></div>
   </div>
 </section>
 
@@ -428,7 +525,7 @@ e.head.appendChild(js)})(window,document,'sentinel','https://track.postshair.com
       <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Preciso ter equipamento profissional para gravar algo parecido?<span class="faq-icone">+</span></button><div class="faq-resposta">Não! Os vídeos já vêm prontos e editados. Você não precisa gravar, filmar ou editar nada — é só baixar o vídeo pronto e publicar nas suas redes.</div></div>
       <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Qual a diferença entre o Plano Básico e o Pacote Completo?<span class="faq-icone">+</span></button><div class="faq-resposta">O Plano Básico inclui 5 vídeos, 10 posts, 5 stories e 10 legendas — ideal para testar. O Pacote Completo tem tudo do básico e muito mais, incluindo todos os bônus exclusivos.</div></div>
     </div>
-    <div class="text-center mt-32"><a href="https://app.mivvo.com.br/checkout/01a0e2fc-2fc6-7683-b746-25e86340803a" class="btn-cta">👉 QUERO GARANTIR MEU PACOTE AGORA</a></div>
+    <div class="text-center mt-32"><a href="https://app.mivvo.com.br/checkout/01a0e2fc-2fc6-7683-b746-25e86340803a" class="btn-cta">QUERO PARAR DE PERDER CLIENTE PARA O CONCORRENTE</a></div>
   </div>
 </section>
 
